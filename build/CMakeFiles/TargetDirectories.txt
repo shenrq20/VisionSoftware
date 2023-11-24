@@ -1,0 +1,3 @@
+/mnt/c/Code/SWD-VisionSoftware/build/CMakeFiles/VisionSoftware.dir
+/mnt/c/Code/SWD-VisionSoftware/build/CMakeFiles/edit_cache.dir
+/mnt/c/Code/SWD-VisionSoftware/build/CMakeFiles/rebuild_cache.dir

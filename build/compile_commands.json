@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/mnt/c/Code/SWD-VisionSoftware/build",
+  "command": "/usr/bin/c++   -g -std=gnu++20 -o CMakeFiles/VisionSoftware.dir/main.cpp.o -c /mnt/c/Code/SWD-VisionSoftware/main.cpp",
+  "file": "/mnt/c/Code/SWD-VisionSoftware/main.cpp"
+}
+]
