@@ -1,0 +1,398 @@
+\hypertarget{classdevice_1_1EKI}{}\doxysection{device\+::E\+KI Class Reference}
+\label{classdevice_1_1EKI}\index{device::EKI@{device::EKI}}
+
+
+{\ttfamily \#include $<$kuka\+\_\+eki\+\_\+hw\+\_\+interface.\+h$>$}
+
+
+
+Collaboration diagram for device\+::E\+KI\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classdevice_1_1EKI__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classdevice_1_1EKI_a5faa206b75e74dfed7b96f8bfa1d981b}{Connect}} ()
+\item 
+void \mbox{\hyperlink{classdevice_1_1EKI_a974f2b97a7daab180e50e786e3c1c5ad}{Disconnect}} ()
+\item 
+\mbox{\hyperlink{classdevice_1_1EKI_ad7a35f1ab5651cc03503d7653e40eef8}{E\+KI}} ()
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classdevice_1_1EKI_aadebbfa505fd6f4a898c87e409b4a46d}{Get\+Position}} (\mbox{\hyperlink{namespacedevice_a2a8c129ff2ce70824317cbea9ecc0da2}{Coordinate\+Type}} coordinate\+\_\+type=Coordinate\+Type\+::k\+Cartesian\+Coordinate\+System)
+\item 
+void \mbox{\hyperlink{classdevice_1_1EKI_a709aaba73dd4b7db5d39ee72b8ebd377}{Init}} (const std\+::string \&ip\+\_\+address, const std\+::string \&port)
+\item 
+int \mbox{\hyperlink{classdevice_1_1EKI_ac72d045bd89b0ae9f0eb63110e0226d8}{Is\+Ready}} ()
+\item 
+int \mbox{\hyperlink{classdevice_1_1EKI_ac09c62b1495edbd90a1a5e7887c29c8d}{Log\+Status}} (std\+::ofstream \&fs)
+\item 
+int \mbox{\hyperlink{classdevice_1_1EKI_a5a372642a6d2e670d15e675c63fba89e}{Print\+Status}} ()
+\item 
+void \mbox{\hyperlink{classdevice_1_1EKI_afa85236cbbfdebb8a4df97af2f56e24b}{Read}} ()
+\item 
+void \mbox{\hyperlink{classdevice_1_1EKI_a58a3276e62749ca29ffe2a086adda0b0}{Set\+Ready}} (int i)
+\item 
+void \mbox{\hyperlink{classdevice_1_1EKI_aef304264f6474ad01e0e05658c707b3e}{Write}} (const \mbox{\hyperlink{classdevice_1_1ControlStruct}{Control\+Struct}} \&control\+\_\+struct)
+\item 
+\mbox{\hyperlink{classdevice_1_1EKI_a00227a11b6b96a820c8c9e77fa519c22}{$\sim$\+E\+KI}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classdevice_1_1EKI_a25e551dc1dea0dcea55c6d2efec1dc57}{act\+\_\+advance\+\_\+}} = 3
+\item 
+int \mbox{\hyperlink{classdevice_1_1EKI_aa3706de5ce3e598b16c0dceae7a442a2}{advance\+\_\+}} = 3
+\item 
+int \mbox{\hyperlink{classdevice_1_1EKI_a6f4c8834e6e12a6a3680a8c2c5d532b4}{command\+\_\+size\+\_\+}} \{\}
+\item 
+bool \mbox{\hyperlink{classdevice_1_1EKI_af85c2881ebc567d8af1c07505d71a9c1}{connected\+\_\+}} = false
+\item 
+int($\ast$ \mbox{\hyperlink{classdevice_1_1EKI_a341d121481ab22f7d1f597e487cf581a}{Monitor}} )(\mbox{\hyperlink{classdevice_1_1EKI}{E\+KI}} $\ast$eki) = \&\mbox{\hyperlink{classdevice_1_1EKI_ae8688c611fe0c7a7ea74577553a1409f}{Default\+Monitor}}
+\item 
+int \mbox{\hyperlink{classdevice_1_1EKI_ad23fc07364b559f69c88e7925105fb3e}{moving\+\_\+status\+\_\+}} \{\}
+\item 
+std\+::mutex \mbox{\hyperlink{classdevice_1_1EKI_a1ce30f10193c22d37d4d57c219bc4cf7}{position\+\_\+mutex\+\_\+}}
+\item 
+int \mbox{\hyperlink{classdevice_1_1EKI_ab068b7747029ab7c64e5ec9024090164}{pro\+\_\+move\+\_\+}} \{\}
+\item 
+int \mbox{\hyperlink{classdevice_1_1EKI_ab083cfdd057f70f7374eb93bf43f6f63}{ready\+\_\+}} \{\}
+\item 
+std\+::mutex \mbox{\hyperlink{classdevice_1_1EKI_acd051e03fba69ce73111796cbce28dc2}{ready\+\_\+mutex\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classdevice_1_1EKI_a5ffccf47dbd86a3557c1638b8430cda4}{eki\+\_\+check\+\_\+read\+\_\+state\+\_\+deadline}} ()
+\item 
+bool \mbox{\hyperlink{classdevice_1_1EKI_a31e96dce14b5289c22ed7a323a02ec23}{eki\+\_\+read\+\_\+state}} ()
+\item 
+bool \mbox{\hyperlink{classdevice_1_1EKI_abd5a7f12f82c3b47501e819b58b5dba0}{eki\+\_\+write\+\_\+command}} (const \mbox{\hyperlink{classdevice_1_1ControlStruct}{Control\+Struct}} \&control\+\_\+struct)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{classdevice_1_1EKI_ae8688c611fe0c7a7ea74577553a1409f}{Default\+Monitor}} (\mbox{\hyperlink{classdevice_1_1EKI}{E\+KI}} $\ast$eki)
+\item 
+static void \mbox{\hyperlink{classdevice_1_1EKI_ad092fbc8d2a447c587caaa8f6b8175d6}{eki\+\_\+handle\+\_\+receive}} (const boost\+::system\+::error\+\_\+code \&ec, size\+\_\+t length, boost\+::system\+::error\+\_\+code $\ast$out\+\_\+ec, size\+\_\+t $\ast$out\+\_\+length)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classdevice_1_1EKI_a2ef80da28f958b2d8843f7890f5849e3}{axis\+\_\+coordinate\+\_\+name\+\_\+}} = \{\char`\"{}A1\char`\"{}, \char`\"{}A2\char`\"{}, \char`\"{}A3\char`\"{}, \char`\"{}A4\char`\"{}, \char`\"{}A5\char`\"{}, \char`\"{}A6\char`\"{}\}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classdevice_1_1EKI_ae4ef74f303512ffc9b3331de885c3f88}{axis\+\_\+position\+\_\+}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classdevice_1_1EKI_a46f595a4d713cb0e23614629d3390e09}{cartesian\+\_\+coordinate\+\_\+name\+\_\+}} = \{\char`\"{}X\char`\"{}, \char`\"{}Y\char`\"{}, \char`\"{}Z\char`\"{}, \char`\"{}A\char`\"{}, \char`\"{}B\char`\"{}, \char`\"{}C\char`\"{}\}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classdevice_1_1EKI_ad2530fd69f19dd27ffe6f5c5b557305d}{cartesian\+\_\+position\+\_\+}}
+\item 
+boost\+::asio\+::deadline\+\_\+timer \mbox{\hyperlink{classdevice_1_1EKI_ae5610468b4209f5dcaf40cd2adefc796}{deadline\+\_\+}}
+\item 
+int \mbox{\hyperlink{classdevice_1_1EKI_a6c0d56453f0d3a89317bc0b7568f96c0}{eki\+\_\+read\+\_\+state\+\_\+timeout\+\_\+}} = 60
+\item 
+std\+::string \mbox{\hyperlink{classdevice_1_1EKI_a86ee57b7ce94ce597316b3931aa5240d}{eki\+\_\+server\+\_\+address\+\_\+}}
+\item 
+boost\+::asio\+::ip\+::udp\+::endpoint \mbox{\hyperlink{classdevice_1_1EKI_abf0bb8b70238c973329cbfd06c1c4d23}{eki\+\_\+server\+\_\+endpoint\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{classdevice_1_1EKI_ab00ab835f4249a13d2abacd8132aa9e5}{eki\+\_\+server\+\_\+port\+\_\+}}
+\item 
+boost\+::asio\+::ip\+::udp\+::socket \mbox{\hyperlink{classdevice_1_1EKI_a029de72edc1f05bbc2ed80ba18d7685c}{eki\+\_\+server\+\_\+socket\+\_\+}}
+\item 
+boost\+::asio\+::io\+\_\+service \mbox{\hyperlink{classdevice_1_1EKI_a7c615c6ea656c6e221af77699d39347c}{ios\+\_\+}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classdevice_1_1EKI_aaa528a47942125d9d4806b9c3b15dffb}{joint\+\_\+effort\+\_\+}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classdevice_1_1EKI_ac161cd948d0b2e927857340bd5ad0ddf}{joint\+\_\+velocity\+\_\+}}
+\item 
+std\+::thread \mbox{\hyperlink{classdevice_1_1EKI_abe45fbfc62296372d71a2474989d1d49}{monitor\+\_\+thread\+\_\+}}
+\item 
+const unsigned int \mbox{\hyperlink{classdevice_1_1EKI_a71c2a67acb1312a0261a902e9a8bf89b}{n\+\_\+dof\+\_\+}} = 6
+\item 
+std\+::chrono\+::time\+\_\+point$<$ std\+::chrono\+::steady\+\_\+clock $>$ \mbox{\hyperlink{classdevice_1_1EKI_a56e735824b2bebe5e4f4b6ab30af4e09}{now\+\_\+}}
+\item 
+std\+::chrono\+::time\+\_\+point$<$ std\+::chrono\+::steady\+\_\+clock $>$ \mbox{\hyperlink{classdevice_1_1EKI_a21599c7cd5b0fe0c8209766930d4f4d7}{prev\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdevice_1_1EKI_ad7a35f1ab5651cc03503d7653e40eef8}\label{classdevice_1_1EKI_ad7a35f1ab5651cc03503d7653e40eef8}} 
+\index{device::EKI@{device::EKI}!EKI@{EKI}}
+\index{EKI@{EKI}!device::EKI@{device::EKI}}
+\doxysubsubsection{\texorpdfstring{EKI()}{EKI()}}
+{\footnotesize\ttfamily device\+::\+E\+K\+I\+::\+E\+KI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdevice_1_1EKI_a00227a11b6b96a820c8c9e77fa519c22}\label{classdevice_1_1EKI_a00227a11b6b96a820c8c9e77fa519c22}} 
+\index{device::EKI@{device::EKI}!````~EKI@{$\sim$EKI}}
+\index{````~EKI@{$\sim$EKI}!device::EKI@{device::EKI}}
+\doxysubsubsection{\texorpdfstring{$\sim$EKI()}{~EKI()}}
+{\footnotesize\ttfamily device\+::\+E\+K\+I\+::$\sim$\+E\+KI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdevice_1_1EKI_a5faa206b75e74dfed7b96f8bfa1d981b}\label{classdevice_1_1EKI_a5faa206b75e74dfed7b96f8bfa1d981b}} 
+\index{device::EKI@{device::EKI}!Connect@{Connect}}
+\index{Connect@{Connect}!device::EKI@{device::EKI}}
+\doxysubsubsection{\texorpdfstring{Connect()}{Connect()}}
+{\footnotesize\ttfamily void device\+::\+E\+K\+I\+::\+Connect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdevice_1_1EKI_ae8688c611fe0c7a7ea74577553a1409f}\label{classdevice_1_1EKI_ae8688c611fe0c7a7ea74577553a1409f}} 
+\index{device::EKI@{device::EKI}!DefaultMonitor@{DefaultMonitor}}
+\index{DefaultMonitor@{DefaultMonitor}!device::EKI@{device::EKI}}
+\doxysubsubsection{\texorpdfstring{DefaultMonitor()}{DefaultMonitor()}}
+{\footnotesize\ttfamily int device\+::\+E\+K\+I\+::\+Default\+Monitor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdevice_1_1EKI}{E\+KI}} $\ast$}]{eki }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdevice_1_1EKI_a974f2b97a7daab180e50e786e3c1c5ad}\label{classdevice_1_1EKI_a974f2b97a7daab180e50e786e3c1c5ad}} 
+\index{device::EKI@{device::EKI}!Disconnect@{Disconnect}}
+\index{Disconnect@{Disconnect}!device::EKI@{device::EKI}}
+\doxysubsubsection{\texorpdfstring{Disconnect()}{Disconnect()}}
+{\footnotesize\ttfamily void device\+::\+E\+K\+I\+::\+Disconnect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdevice_1_1EKI_a5ffccf47dbd86a3557c1638b8430cda4}\label{classdevice_1_1EKI_a5ffccf47dbd86a3557c1638b8430cda4}} 
+\index{device::EKI@{device::EKI}!eki\_check\_read\_state\_deadline@{eki\_check\_read\_state\_deadline}}
+\index{eki\_check\_read\_state\_deadline@{eki\_check\_read\_state\_deadline}!device::EKI@{device::EKI}}
+\doxysubsubsection{\texorpdfstring{eki\_check\_read\_state\_deadline()}{eki\_check\_read\_state\_deadline()}}
+{\footnotesize\ttfamily void device\+::\+E\+K\+I\+::eki\+\_\+check\+\_\+read\+\_\+state\+\_\+deadline (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdevice_1_1EKI_ad092fbc8d2a447c587caaa8f6b8175d6}\label{classdevice_1_1EKI_ad092fbc8d2a447c587caaa8f6b8175d6}} 
+\index{device::EKI@{device::EKI}!eki\_handle\_receive@{eki\_handle\_receive}}
+\index{eki\_handle\_receive@{eki\_handle\_receive}!device::EKI@{device::EKI}}
+\doxysubsubsection{\texorpdfstring{eki\_handle\_receive()}{eki\_handle\_receive()}}
+{\footnotesize\ttfamily void device\+::\+E\+K\+I\+::eki\+\_\+handle\+\_\+receive (\begin{DoxyParamCaption}\item[{const boost\+::system\+::error\+\_\+code \&}]{ec,  }\item[{size\+\_\+t}]{length,  }\item[{boost\+::system\+::error\+\_\+code $\ast$}]{out\+\_\+ec,  }\item[{size\+\_\+t $\ast$}]{out\+\_\+length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdevice_1_1EKI_a31e96dce14b5289c22ed7a323a02ec23}\label{classdevice_1_1EKI_a31e96dce14b5289c22ed7a323a02ec23}} 
+\index{device::EKI@{device::EKI}!eki\_read\_state@{eki\_read\_state}}
+\index{eki\_read\_state@{eki\_read\_state}!device::EKI@{device::EKI}}
+\doxysubsubsection{\texorpdfstring{eki\_read\_state()}{eki\_read\_state()}}
+{\footnotesize\ttfamily bool device\+::\+E\+K\+I\+::eki\+\_\+read\+\_\+state (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdevice_1_1EKI_abd5a7f12f82c3b47501e819b58b5dba0}\label{classdevice_1_1EKI_abd5a7f12f82c3b47501e819b58b5dba0}} 
+\index{device::EKI@{device::EKI}!eki\_write\_command@{eki\_write\_command}}
+\index{eki\_write\_command@{eki\_write\_command}!device::EKI@{device::EKI}}
+\doxysubsubsection{\texorpdfstring{eki\_write\_command()}{eki\_write\_command()}}
+{\footnotesize\ttfamily bool device\+::\+E\+K\+I\+::eki\+\_\+write\+\_\+command (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classdevice_1_1ControlStruct}{Control\+Struct}} \&}]{control\+\_\+struct }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdevice_1_1EKI_aadebbfa505fd6f4a898c87e409b4a46d}\label{classdevice_1_1EKI_aadebbfa505fd6f4a898c87e409b4a46d}} 
+\index{device::EKI@{device::EKI}!GetPosition@{GetPosition}}
+\index{GetPosition@{GetPosition}!device::EKI@{device::EKI}}
+\doxysubsubsection{\texorpdfstring{GetPosition()}{GetPosition()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ device\+::\+E\+K\+I\+::\+Get\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacedevice_a2a8c129ff2ce70824317cbea9ecc0da2}{Coordinate\+Type}}}]{coordinate\+\_\+type = {\ttfamily CoordinateType\+:\+:kCartesianCoordinateSystem} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdevice_1_1EKI_a709aaba73dd4b7db5d39ee72b8ebd377}\label{classdevice_1_1EKI_a709aaba73dd4b7db5d39ee72b8ebd377}} 
+\index{device::EKI@{device::EKI}!Init@{Init}}
+\index{Init@{Init}!device::EKI@{device::EKI}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void device\+::\+E\+K\+I\+::\+Init (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ip\+\_\+address,  }\item[{const std\+::string \&}]{port }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdevice_1_1EKI_ac72d045bd89b0ae9f0eb63110e0226d8}\label{classdevice_1_1EKI_ac72d045bd89b0ae9f0eb63110e0226d8}} 
+\index{device::EKI@{device::EKI}!IsReady@{IsReady}}
+\index{IsReady@{IsReady}!device::EKI@{device::EKI}}
+\doxysubsubsection{\texorpdfstring{IsReady()}{IsReady()}}
+{\footnotesize\ttfamily int device\+::\+E\+K\+I\+::\+Is\+Ready (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdevice_1_1EKI_ac09c62b1495edbd90a1a5e7887c29c8d}\label{classdevice_1_1EKI_ac09c62b1495edbd90a1a5e7887c29c8d}} 
+\index{device::EKI@{device::EKI}!LogStatus@{LogStatus}}
+\index{LogStatus@{LogStatus}!device::EKI@{device::EKI}}
+\doxysubsubsection{\texorpdfstring{LogStatus()}{LogStatus()}}
+{\footnotesize\ttfamily int device\+::\+E\+K\+I\+::\+Log\+Status (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{fs }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdevice_1_1EKI_a5a372642a6d2e670d15e675c63fba89e}\label{classdevice_1_1EKI_a5a372642a6d2e670d15e675c63fba89e}} 
+\index{device::EKI@{device::EKI}!PrintStatus@{PrintStatus}}
+\index{PrintStatus@{PrintStatus}!device::EKI@{device::EKI}}
+\doxysubsubsection{\texorpdfstring{PrintStatus()}{PrintStatus()}}
+{\footnotesize\ttfamily int device\+::\+E\+K\+I\+::\+Print\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdevice_1_1EKI_afa85236cbbfdebb8a4df97af2f56e24b}\label{classdevice_1_1EKI_afa85236cbbfdebb8a4df97af2f56e24b}} 
+\index{device::EKI@{device::EKI}!Read@{Read}}
+\index{Read@{Read}!device::EKI@{device::EKI}}
+\doxysubsubsection{\texorpdfstring{Read()}{Read()}}
+{\footnotesize\ttfamily void device\+::\+E\+K\+I\+::\+Read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdevice_1_1EKI_a58a3276e62749ca29ffe2a086adda0b0}\label{classdevice_1_1EKI_a58a3276e62749ca29ffe2a086adda0b0}} 
+\index{device::EKI@{device::EKI}!SetReady@{SetReady}}
+\index{SetReady@{SetReady}!device::EKI@{device::EKI}}
+\doxysubsubsection{\texorpdfstring{SetReady()}{SetReady()}}
+{\footnotesize\ttfamily void device\+::\+E\+K\+I\+::\+Set\+Ready (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdevice_1_1EKI_aef304264f6474ad01e0e05658c707b3e}\label{classdevice_1_1EKI_aef304264f6474ad01e0e05658c707b3e}} 
+\index{device::EKI@{device::EKI}!Write@{Write}}
+\index{Write@{Write}!device::EKI@{device::EKI}}
+\doxysubsubsection{\texorpdfstring{Write()}{Write()}}
+{\footnotesize\ttfamily void device\+::\+E\+K\+I\+::\+Write (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classdevice_1_1ControlStruct}{Control\+Struct}} \&}]{control\+\_\+struct }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classdevice_1_1EKI_a25e551dc1dea0dcea55c6d2efec1dc57}\label{classdevice_1_1EKI_a25e551dc1dea0dcea55c6d2efec1dc57}} 
+\index{device::EKI@{device::EKI}!act\_advance\_@{act\_advance\_}}
+\index{act\_advance\_@{act\_advance\_}!device::EKI@{device::EKI}}
+\doxysubsubsection{\texorpdfstring{act\_advance\_}{act\_advance\_}}
+{\footnotesize\ttfamily int device\+::\+E\+K\+I\+::act\+\_\+advance\+\_\+ = 3}
+
+\mbox{\Hypertarget{classdevice_1_1EKI_aa3706de5ce3e598b16c0dceae7a442a2}\label{classdevice_1_1EKI_aa3706de5ce3e598b16c0dceae7a442a2}} 
+\index{device::EKI@{device::EKI}!advance\_@{advance\_}}
+\index{advance\_@{advance\_}!device::EKI@{device::EKI}}
+\doxysubsubsection{\texorpdfstring{advance\_}{advance\_}}
+{\footnotesize\ttfamily int device\+::\+E\+K\+I\+::advance\+\_\+ = 3}
+
+\mbox{\Hypertarget{classdevice_1_1EKI_a2ef80da28f958b2d8843f7890f5849e3}\label{classdevice_1_1EKI_a2ef80da28f958b2d8843f7890f5849e3}} 
+\index{device::EKI@{device::EKI}!axis\_coordinate\_name\_@{axis\_coordinate\_name\_}}
+\index{axis\_coordinate\_name\_@{axis\_coordinate\_name\_}!device::EKI@{device::EKI}}
+\doxysubsubsection{\texorpdfstring{axis\_coordinate\_name\_}{axis\_coordinate\_name\_}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ device\+::\+E\+K\+I\+::axis\+\_\+coordinate\+\_\+name\+\_\+ = \{\char`\"{}A1\char`\"{}, \char`\"{}A2\char`\"{}, \char`\"{}A3\char`\"{}, \char`\"{}A4\char`\"{}, \char`\"{}A5\char`\"{}, \char`\"{}A6\char`\"{}\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdevice_1_1EKI_ae4ef74f303512ffc9b3331de885c3f88}\label{classdevice_1_1EKI_ae4ef74f303512ffc9b3331de885c3f88}} 
+\index{device::EKI@{device::EKI}!axis\_position\_@{axis\_position\_}}
+\index{axis\_position\_@{axis\_position\_}!device::EKI@{device::EKI}}
+\doxysubsubsection{\texorpdfstring{axis\_position\_}{axis\_position\_}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ device\+::\+E\+K\+I\+::axis\+\_\+position\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdevice_1_1EKI_a46f595a4d713cb0e23614629d3390e09}\label{classdevice_1_1EKI_a46f595a4d713cb0e23614629d3390e09}} 
+\index{device::EKI@{device::EKI}!cartesian\_coordinate\_name\_@{cartesian\_coordinate\_name\_}}
+\index{cartesian\_coordinate\_name\_@{cartesian\_coordinate\_name\_}!device::EKI@{device::EKI}}
+\doxysubsubsection{\texorpdfstring{cartesian\_coordinate\_name\_}{cartesian\_coordinate\_name\_}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ device\+::\+E\+K\+I\+::cartesian\+\_\+coordinate\+\_\+name\+\_\+ = \{\char`\"{}X\char`\"{}, \char`\"{}Y\char`\"{}, \char`\"{}Z\char`\"{}, \char`\"{}A\char`\"{}, \char`\"{}B\char`\"{}, \char`\"{}C\char`\"{}\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdevice_1_1EKI_ad2530fd69f19dd27ffe6f5c5b557305d}\label{classdevice_1_1EKI_ad2530fd69f19dd27ffe6f5c5b557305d}} 
+\index{device::EKI@{device::EKI}!cartesian\_position\_@{cartesian\_position\_}}
+\index{cartesian\_position\_@{cartesian\_position\_}!device::EKI@{device::EKI}}
+\doxysubsubsection{\texorpdfstring{cartesian\_position\_}{cartesian\_position\_}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ device\+::\+E\+K\+I\+::cartesian\+\_\+position\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdevice_1_1EKI_a6f4c8834e6e12a6a3680a8c2c5d532b4}\label{classdevice_1_1EKI_a6f4c8834e6e12a6a3680a8c2c5d532b4}} 
+\index{device::EKI@{device::EKI}!command\_size\_@{command\_size\_}}
+\index{command\_size\_@{command\_size\_}!device::EKI@{device::EKI}}
+\doxysubsubsection{\texorpdfstring{command\_size\_}{command\_size\_}}
+{\footnotesize\ttfamily int device\+::\+E\+K\+I\+::command\+\_\+size\+\_\+ \{\}}
+
+\mbox{\Hypertarget{classdevice_1_1EKI_af85c2881ebc567d8af1c07505d71a9c1}\label{classdevice_1_1EKI_af85c2881ebc567d8af1c07505d71a9c1}} 
+\index{device::EKI@{device::EKI}!connected\_@{connected\_}}
+\index{connected\_@{connected\_}!device::EKI@{device::EKI}}
+\doxysubsubsection{\texorpdfstring{connected\_}{connected\_}}
+{\footnotesize\ttfamily bool device\+::\+E\+K\+I\+::connected\+\_\+ = false}
+
+\mbox{\Hypertarget{classdevice_1_1EKI_ae5610468b4209f5dcaf40cd2adefc796}\label{classdevice_1_1EKI_ae5610468b4209f5dcaf40cd2adefc796}} 
+\index{device::EKI@{device::EKI}!deadline\_@{deadline\_}}
+\index{deadline\_@{deadline\_}!device::EKI@{device::EKI}}
+\doxysubsubsection{\texorpdfstring{deadline\_}{deadline\_}}
+{\footnotesize\ttfamily boost\+::asio\+::deadline\+\_\+timer device\+::\+E\+K\+I\+::deadline\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdevice_1_1EKI_a6c0d56453f0d3a89317bc0b7568f96c0}\label{classdevice_1_1EKI_a6c0d56453f0d3a89317bc0b7568f96c0}} 
+\index{device::EKI@{device::EKI}!eki\_read\_state\_timeout\_@{eki\_read\_state\_timeout\_}}
+\index{eki\_read\_state\_timeout\_@{eki\_read\_state\_timeout\_}!device::EKI@{device::EKI}}
+\doxysubsubsection{\texorpdfstring{eki\_read\_state\_timeout\_}{eki\_read\_state\_timeout\_}}
+{\footnotesize\ttfamily int device\+::\+E\+K\+I\+::eki\+\_\+read\+\_\+state\+\_\+timeout\+\_\+ = 60\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdevice_1_1EKI_a86ee57b7ce94ce597316b3931aa5240d}\label{classdevice_1_1EKI_a86ee57b7ce94ce597316b3931aa5240d}} 
+\index{device::EKI@{device::EKI}!eki\_server\_address\_@{eki\_server\_address\_}}
+\index{eki\_server\_address\_@{eki\_server\_address\_}!device::EKI@{device::EKI}}
+\doxysubsubsection{\texorpdfstring{eki\_server\_address\_}{eki\_server\_address\_}}
+{\footnotesize\ttfamily std\+::string device\+::\+E\+K\+I\+::eki\+\_\+server\+\_\+address\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdevice_1_1EKI_abf0bb8b70238c973329cbfd06c1c4d23}\label{classdevice_1_1EKI_abf0bb8b70238c973329cbfd06c1c4d23}} 
+\index{device::EKI@{device::EKI}!eki\_server\_endpoint\_@{eki\_server\_endpoint\_}}
+\index{eki\_server\_endpoint\_@{eki\_server\_endpoint\_}!device::EKI@{device::EKI}}
+\doxysubsubsection{\texorpdfstring{eki\_server\_endpoint\_}{eki\_server\_endpoint\_}}
+{\footnotesize\ttfamily boost\+::asio\+::ip\+::udp\+::endpoint device\+::\+E\+K\+I\+::eki\+\_\+server\+\_\+endpoint\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdevice_1_1EKI_ab00ab835f4249a13d2abacd8132aa9e5}\label{classdevice_1_1EKI_ab00ab835f4249a13d2abacd8132aa9e5}} 
+\index{device::EKI@{device::EKI}!eki\_server\_port\_@{eki\_server\_port\_}}
+\index{eki\_server\_port\_@{eki\_server\_port\_}!device::EKI@{device::EKI}}
+\doxysubsubsection{\texorpdfstring{eki\_server\_port\_}{eki\_server\_port\_}}
+{\footnotesize\ttfamily std\+::string device\+::\+E\+K\+I\+::eki\+\_\+server\+\_\+port\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdevice_1_1EKI_a029de72edc1f05bbc2ed80ba18d7685c}\label{classdevice_1_1EKI_a029de72edc1f05bbc2ed80ba18d7685c}} 
+\index{device::EKI@{device::EKI}!eki\_server\_socket\_@{eki\_server\_socket\_}}
+\index{eki\_server\_socket\_@{eki\_server\_socket\_}!device::EKI@{device::EKI}}
+\doxysubsubsection{\texorpdfstring{eki\_server\_socket\_}{eki\_server\_socket\_}}
+{\footnotesize\ttfamily boost\+::asio\+::ip\+::udp\+::socket device\+::\+E\+K\+I\+::eki\+\_\+server\+\_\+socket\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdevice_1_1EKI_a7c615c6ea656c6e221af77699d39347c}\label{classdevice_1_1EKI_a7c615c6ea656c6e221af77699d39347c}} 
+\index{device::EKI@{device::EKI}!ios\_@{ios\_}}
+\index{ios\_@{ios\_}!device::EKI@{device::EKI}}
+\doxysubsubsection{\texorpdfstring{ios\_}{ios\_}}
+{\footnotesize\ttfamily boost\+::asio\+::io\+\_\+service device\+::\+E\+K\+I\+::ios\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdevice_1_1EKI_aaa528a47942125d9d4806b9c3b15dffb}\label{classdevice_1_1EKI_aaa528a47942125d9d4806b9c3b15dffb}} 
+\index{device::EKI@{device::EKI}!joint\_effort\_@{joint\_effort\_}}
+\index{joint\_effort\_@{joint\_effort\_}!device::EKI@{device::EKI}}
+\doxysubsubsection{\texorpdfstring{joint\_effort\_}{joint\_effort\_}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ device\+::\+E\+K\+I\+::joint\+\_\+effort\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdevice_1_1EKI_ac161cd948d0b2e927857340bd5ad0ddf}\label{classdevice_1_1EKI_ac161cd948d0b2e927857340bd5ad0ddf}} 
+\index{device::EKI@{device::EKI}!joint\_velocity\_@{joint\_velocity\_}}
+\index{joint\_velocity\_@{joint\_velocity\_}!device::EKI@{device::EKI}}
+\doxysubsubsection{\texorpdfstring{joint\_velocity\_}{joint\_velocity\_}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ device\+::\+E\+K\+I\+::joint\+\_\+velocity\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdevice_1_1EKI_a341d121481ab22f7d1f597e487cf581a}\label{classdevice_1_1EKI_a341d121481ab22f7d1f597e487cf581a}} 
+\index{device::EKI@{device::EKI}!Monitor@{Monitor}}
+\index{Monitor@{Monitor}!device::EKI@{device::EKI}}
+\doxysubsubsection{\texorpdfstring{Monitor}{Monitor}}
+{\footnotesize\ttfamily int($\ast$ device\+::\+E\+K\+I\+::\+Monitor) (\mbox{\hyperlink{classdevice_1_1EKI}{E\+KI}} $\ast$eki) = \&\mbox{\hyperlink{classdevice_1_1EKI_ae8688c611fe0c7a7ea74577553a1409f}{Default\+Monitor}}}
+
+\mbox{\Hypertarget{classdevice_1_1EKI_abe45fbfc62296372d71a2474989d1d49}\label{classdevice_1_1EKI_abe45fbfc62296372d71a2474989d1d49}} 
+\index{device::EKI@{device::EKI}!monitor\_thread\_@{monitor\_thread\_}}
+\index{monitor\_thread\_@{monitor\_thread\_}!device::EKI@{device::EKI}}
+\doxysubsubsection{\texorpdfstring{monitor\_thread\_}{monitor\_thread\_}}
+{\footnotesize\ttfamily std\+::thread device\+::\+E\+K\+I\+::monitor\+\_\+thread\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdevice_1_1EKI_ad23fc07364b559f69c88e7925105fb3e}\label{classdevice_1_1EKI_ad23fc07364b559f69c88e7925105fb3e}} 
+\index{device::EKI@{device::EKI}!moving\_status\_@{moving\_status\_}}
+\index{moving\_status\_@{moving\_status\_}!device::EKI@{device::EKI}}
+\doxysubsubsection{\texorpdfstring{moving\_status\_}{moving\_status\_}}
+{\footnotesize\ttfamily int device\+::\+E\+K\+I\+::moving\+\_\+status\+\_\+ \{\}}
+
+\mbox{\Hypertarget{classdevice_1_1EKI_a71c2a67acb1312a0261a902e9a8bf89b}\label{classdevice_1_1EKI_a71c2a67acb1312a0261a902e9a8bf89b}} 
+\index{device::EKI@{device::EKI}!n\_dof\_@{n\_dof\_}}
+\index{n\_dof\_@{n\_dof\_}!device::EKI@{device::EKI}}
+\doxysubsubsection{\texorpdfstring{n\_dof\_}{n\_dof\_}}
+{\footnotesize\ttfamily const unsigned int device\+::\+E\+K\+I\+::n\+\_\+dof\+\_\+ = 6\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdevice_1_1EKI_a56e735824b2bebe5e4f4b6ab30af4e09}\label{classdevice_1_1EKI_a56e735824b2bebe5e4f4b6ab30af4e09}} 
+\index{device::EKI@{device::EKI}!now\_@{now\_}}
+\index{now\_@{now\_}!device::EKI@{device::EKI}}
+\doxysubsubsection{\texorpdfstring{now\_}{now\_}}
+{\footnotesize\ttfamily std\+::chrono\+::time\+\_\+point$<$std\+::chrono\+::steady\+\_\+clock$>$ device\+::\+E\+K\+I\+::now\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdevice_1_1EKI_a1ce30f10193c22d37d4d57c219bc4cf7}\label{classdevice_1_1EKI_a1ce30f10193c22d37d4d57c219bc4cf7}} 
+\index{device::EKI@{device::EKI}!position\_mutex\_@{position\_mutex\_}}
+\index{position\_mutex\_@{position\_mutex\_}!device::EKI@{device::EKI}}
+\doxysubsubsection{\texorpdfstring{position\_mutex\_}{position\_mutex\_}}
+{\footnotesize\ttfamily std\+::mutex device\+::\+E\+K\+I\+::position\+\_\+mutex\+\_\+}
+
+\mbox{\Hypertarget{classdevice_1_1EKI_a21599c7cd5b0fe0c8209766930d4f4d7}\label{classdevice_1_1EKI_a21599c7cd5b0fe0c8209766930d4f4d7}} 
+\index{device::EKI@{device::EKI}!prev\_@{prev\_}}
+\index{prev\_@{prev\_}!device::EKI@{device::EKI}}
+\doxysubsubsection{\texorpdfstring{prev\_}{prev\_}}
+{\footnotesize\ttfamily std\+::chrono\+::time\+\_\+point$<$std\+::chrono\+::steady\+\_\+clock$>$ device\+::\+E\+K\+I\+::prev\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdevice_1_1EKI_ab068b7747029ab7c64e5ec9024090164}\label{classdevice_1_1EKI_ab068b7747029ab7c64e5ec9024090164}} 
+\index{device::EKI@{device::EKI}!pro\_move\_@{pro\_move\_}}
+\index{pro\_move\_@{pro\_move\_}!device::EKI@{device::EKI}}
+\doxysubsubsection{\texorpdfstring{pro\_move\_}{pro\_move\_}}
+{\footnotesize\ttfamily int device\+::\+E\+K\+I\+::pro\+\_\+move\+\_\+ \{\}}
+
+\mbox{\Hypertarget{classdevice_1_1EKI_ab083cfdd057f70f7374eb93bf43f6f63}\label{classdevice_1_1EKI_ab083cfdd057f70f7374eb93bf43f6f63}} 
+\index{device::EKI@{device::EKI}!ready\_@{ready\_}}
+\index{ready\_@{ready\_}!device::EKI@{device::EKI}}
+\doxysubsubsection{\texorpdfstring{ready\_}{ready\_}}
+{\footnotesize\ttfamily int device\+::\+E\+K\+I\+::ready\+\_\+ \{\}}
+
+\mbox{\Hypertarget{classdevice_1_1EKI_acd051e03fba69ce73111796cbce28dc2}\label{classdevice_1_1EKI_acd051e03fba69ce73111796cbce28dc2}} 
+\index{device::EKI@{device::EKI}!ready\_mutex\_@{ready\_mutex\_}}
+\index{ready\_mutex\_@{ready\_mutex\_}!device::EKI@{device::EKI}}
+\doxysubsubsection{\texorpdfstring{ready\_mutex\_}{ready\_mutex\_}}
+{\footnotesize\ttfamily std\+::mutex device\+::\+E\+K\+I\+::ready\+\_\+mutex\+\_\+}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/device/kuka\+\_\+eki\+\_\+hw\+\_\+interface/include/kuka\+\_\+eki\+\_\+hw\+\_\+interface/\mbox{\hyperlink{kuka__eki__hw__interface_8h}{kuka\+\_\+eki\+\_\+hw\+\_\+interface.\+h}}\item 
+src/device/kuka\+\_\+eki\+\_\+hw\+\_\+interface/\mbox{\hyperlink{kuka__eki__hw__interface_8cpp}{kuka\+\_\+eki\+\_\+hw\+\_\+interface.\+cpp}}\end{DoxyCompactItemize}

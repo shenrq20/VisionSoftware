@@ -1,0 +1,57 @@
+This guide highlights the steps needed in order to successfully configure the {\bfseries{E\+KI interface}} on the controller to work with the {\bfseries{kuka\+\_\+eki\+\_\+hw\+\_\+interface}} on your PC with R\+OS.\hypertarget{md_src_device_kuka_eki_hw_interface_krl_README_autotoc_md2}{}\doxysection{1. Controller network configuration}\label{md_src_device_kuka_eki_hw_interface_krl_README_autotoc_md2}
+Windows runs behind the Smart\+H\+MI on the teach pad. Make sure that the {\bfseries{Windows interface}} of the controller and the $\ast$ $\ast$\+PC with R\+O\+S$\ast$$\ast$ is connected to the same subnet.
+
+
+\begin{DoxyEnumerate}
+\item Log in as {\bfseries{Expert}} or {\bfseries{Administrator}} on the teach pad and navigate to {\bfseries{Network configuration}} ({\bfseries{Connect-\/up $>$ Network configuration $>$ Activate advanced configuration}}).
+\item There should already be an interface checked out as the {\bfseries{Windows interface}}. For example\+:
+\begin{DoxyItemize}
+\item {\bfseries{IP}}\+: {\ttfamily 192.\+168.\+1.\+121}
+\item {\bfseries{Subnet mask}}\+: {\ttfamily 255.\+255.\+255.\+0}
+\item {\bfseries{Default gateway}}\+: {\ttfamily 192.\+168.\+1.\+121}
+\item {\bfseries{Windows interface checkbox}} should be checked.
+\end{DoxyItemize}
+\item Make note of the above IP address as you will need it later.
+\item (Optional) Run {\bfseries{cmd.\+exe}} and ping the PC you want to communicate with on the same subnet (e.\+g. 192.\+168.\+1.\+10). If your {\bfseries{PC}} has an IP address on the same subnet as the {\bfseries{Windows interface}} on the controller, the controller should receive answers from the PC.
+\end{DoxyEnumerate}\hypertarget{md_src_device_kuka_eki_hw_interface_krl_README_autotoc_md3}{}\doxysection{2. K\+R\+L Files}\label{md_src_device_kuka_eki_hw_interface_krl_README_autotoc_md3}
+The files included in the {\ttfamily kuka\+\_\+eki\+\_\+hw\+\_\+interface/krl} folder provide the K\+RL interface and Ethernet packet configurations. The X\+ML files need to be modified to work for your specific configuration\+:\hypertarget{md_src_device_kuka_eki_hw_interface_krl_README_autotoc_md4}{}\doxyparagraph{Eki\+Hw\+Interface.\+xml}\label{md_src_device_kuka_eki_hw_interface_krl_README_autotoc_md4}
+
+\begin{DoxyEnumerate}
+\item Edit the {\ttfamily IP} tag so that it corresponds to the IP address ({\ttfamily address.\+of.\+robot.\+controller}) corresponding to the $\ast$ $\ast$\+Windows interface$\ast$$\ast$ of the controller (noted earlier).
+\item Keep the {\ttfamily P\+O\+RT} tag as it is ({\ttfamily 54600}) or change it if you want to use another port (must be in the range of {\ttfamily 54600} to {\ttfamily 54615}).
+\end{DoxyEnumerate}
+
+Note that the {\ttfamily eki/robot\+\_\+address} and {\ttfamily eki/robot\+\_\+port} parameters of the {\ttfamily kuka\+\_\+eki\+\_\+hw\+\_\+interface} must correspond to the {\ttfamily IP}and {\ttfamily P\+O\+RT} set in this X\+ML file.\hypertarget{md_src_device_kuka_eki_hw_interface_krl_README_autotoc_md5}{}\doxyparagraph{Copy files to controller}\label{md_src_device_kuka_eki_hw_interface_krl_README_autotoc_md5}
+The files {\ttfamily kuka\+\_\+eki\+\_\+hw\+\_\+interface.\+dat} and {\ttfamily kuke\+\_\+eki\+\_\+hw\+\_\+interface.\+src} should not be edited. All files are now ready\+\_\+ to be copied to the Kuka controller. Using Work\+Visual or a U\+SB drive (with appropriate privleges)\+:
+
+
+\begin{DoxyEnumerate}
+\item Copy {\ttfamily kuka\+\_\+eki\+\_\+hw\+\_\+interface.\+dat} and {\ttfamily kuka\+\_\+eki\+\_\+hw\+\_\+interface.\+src} files to {\ttfamily K\+RC\+:\textbackslash{}R1\textbackslash{}Program}.
+\item Copy {\ttfamily Eki\+Hw\+Interface.\+xml} to {\ttfamily C\+:\textbackslash{}K\+RC\textbackslash{}R\+O\+B\+O\+T\+ER\textbackslash{}Config\textbackslash{}User\textbackslash{}Common\textbackslash{}Ethernet\+K\+RL\textbackslash{}}.
+\end{DoxyEnumerate}\hypertarget{md_src_device_kuka_eki_hw_interface_krl_README_autotoc_md6}{}\doxyparagraph{Command Buffering Setup}\label{md_src_device_kuka_eki_hw_interface_krl_README_autotoc_md6}
+The driver currently limits the number of queued joint targets to prevent unbounded trajectory lag (error) that can occur when sufficiently dense target trajectories (temporal and/or spatial) are requested. The size of the buffer is set via the parameter {\ttfamily eki/max\+\_\+cmd\+\_\+buf\+\_\+len}. When not present, the buffer defaults to five (5), which is the maximum number of instructions allowed in the controller\textquotesingle{}s advance\+\_\+ run (i.\+e., K\+RC internal interpolator lookahead).
+
+With the buffering active, overly dense trajectory points are dropped with the result being small and bounded trajectory lag at the expense of some positional deviation (dropped waypoints are not strictly enforced). For paths that require exact positional accuracy buffering can be disabled by setting the limit to a sufficiently large number (e.\+g., 512) with the caveat that dense trajectories might result in low-\/than-\/requested velocity and subsequent time lag. In other words, the buffering limit can be seen as a tradeoff between positional accuracy and time accuracy.\hypertarget{md_src_device_kuka_eki_hw_interface_krl_README_autotoc_md7}{}\doxysection{4. Testing}\label{md_src_device_kuka_eki_hw_interface_krl_README_autotoc_md7}
+At this point you are ready\+\_\+ to test the E\+KI interface. Before the test, make sure that\+:
+
+
+\begin{DoxyItemize}
+\item You have specified the {\ttfamily eki/robot\+\_\+address} and {\ttfamily eki/robot\+\_\+port} of the {\bfseries{kuka\+\_\+eki\+\_\+hw\+\_\+interface}} to correspond with the K\+RL files on the controller.
+\item You have a launch-\/file loading the network parameters, robot description, kuka\+\_\+hw\+\_\+interface, hardware controller and controller joint names.
+\end{DoxyItemize}
+
+The next steps describe how to launch the test file\+:
+
+
+\begin{DoxyItemize}
+\item On the robot, Connect the servers
+\end{DoxyItemize}
+\begin{DoxyEnumerate}
+\item On the teach pad, enter mode {\bfseries{T1}} for testing purposes.
+\item Navigate to {\ttfamily K\+RC\+:\textbackslash{}R1\textbackslash{}Program} and select {\ttfamily kuka\+\_\+eki\+\_\+hw\+\_\+interface.\+src}.
+\item Press and hold an enabling switch and the run/play-\/button. The robot will release its breaks and a message like $\ast$ $\ast$\+Programmed path reached (B\+CO)$\ast$$\ast$ will be shown at the teach pad.
+\item Press and hold again. The robot is now waiting for clients to connect.
+\end{DoxyEnumerate}
+\begin{DoxyItemize}
+\item Note that T1-\/mode limits the robot movement velocity and is intended for testing purposes. 
+\end{DoxyItemize}
