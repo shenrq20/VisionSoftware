@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/VisionSoftware.dir/main.cpp.o -o VisionSoftware 
