@@ -1,14 +1,20 @@
 [
 {
   "directory": "/mnt/c/Code/SWD-VisionSoftware-/build",
-  "command": "/usr/bin/g++ -DDIY_NO_THREADS -DFMT_SHARED -DH5_BUILT_AS_DYNAMIC_LIB -DVTK_HAS_OGGTHEORA_SUPPORT -Dkiss_fft_scalar=double -I/usr/include/eigen3 -I/usr/local/include/opencv4 -I/mnt/c/Code/SWD-VisionSoftware-/src/device/kuka_eki_hw_interface/include -I/mnt/c/Code/SWD-VisionSoftware-/src/device/kuka_eki_hw_interface/include/kuka_eki_hw_interface -isystem /usr/local/vtk-9.3/include/vtk-9.3 -isystem /usr/local/vtk-9.3/include/vtk-9.3/vtkfreetype/include -isystem /usr/local/vtk-9.3/include/vtk-9.3/vtkhdf5 -isystem /usr/local/vtk-9.3/include/vtk-9.3/vtkhdf5/src -isystem /usr/local/vtk-9.3/include/vtk-9.3/vtkhdf5/hl/src -isystem /usr/local/vtk-9.3/include/vtk-9.3/vtkogg/include -isystem /usr/local/vtk-9.3/include/vtk-9.3/vtklibproj/src -isystem /usr/local/vtk-9.3/include/vtk-9.3/vtknlohmannjson/include -isystem /usr/local/vtk-9.3/include/vtk-9.3/vtklibxml2/include -g -std=gnu++2a -o CMakeFiles/VisionSoftware.dir/main.cpp.o -c /mnt/c/Code/SWD-VisionSoftware-/main.cpp",
+  "command": "/usr/bin/c++ -DDIY_NO_THREADS -DFMT_SHARED -DH5_BUILT_AS_DYNAMIC_LIB -DVTK_HAS_OGGTHEORA_SUPPORT -Dkiss_fft_scalar=double -I/usr/include/eigen3 -I/mnt/c/Code/SWD-VisionSoftware-/src/device/kuka_eki_hw_interface/include -I/mnt/c/Code/SWD-VisionSoftware-/src/device/kuka_eki_hw_interface/include/kuka_eki_hw_interface -I/mnt/c/Code/SWD-VisionSoftware-/src/process/image/include -isystem /usr/local/include/opencv4 -isystem /usr/local/vtk-9.3/include/vtk-9.3 -isystem /usr/local/vtk-9.3/include/vtk-9.3/vtkfreetype/include -isystem /usr/local/vtk-9.3/include/vtk-9.3/vtkhdf5 -isystem /usr/local/vtk-9.3/include/vtk-9.3/vtkhdf5/src -isystem /usr/local/vtk-9.3/include/vtk-9.3/vtkhdf5/hl/src -isystem /usr/local/vtk-9.3/include/vtk-9.3/vtkogg/include -isystem /usr/local/vtk-9.3/include/vtk-9.3/vtklibproj/src -isystem /usr/local/vtk-9.3/include/vtk-9.3/vtknlohmannjson/include -isystem /usr/local/vtk-9.3/include/vtk-9.3/vtklibxml2/include -g -std=gnu++2a -o CMakeFiles/VisionSoftware.dir/main.cpp.o -c /mnt/c/Code/SWD-VisionSoftware-/main.cpp",
   "file": "/mnt/c/Code/SWD-VisionSoftware-/main.cpp",
   "output": "CMakeFiles/VisionSoftware.dir/main.cpp.o"
 },
 {
-  "directory": "/mnt/c/Code/SWD-VisionSoftware-/build",
-  "command": "/usr/bin/g++ -I/usr/include/eigen3 -I/usr/local/include/opencv4 -I/mnt/c/Code/SWD-VisionSoftware-/src/device/kuka_eki_hw_interface/include -g -std=gnu++2a -Wall -Werror -o src/device/kuka_eki_hw_interface/CMakeFiles/kuka_eki_hw_interface.dir/kuka_eki_hw_interface.cpp.o -c /mnt/c/Code/SWD-VisionSoftware-/src/device/kuka_eki_hw_interface/kuka_eki_hw_interface.cpp",
+  "directory": "/mnt/c/Code/SWD-VisionSoftware-/build/src/device/kuka_eki_hw_interface",
+  "command": "/usr/bin/c++  -I/usr/include/eigen3 -I/usr/local/include/opencv4 -I/mnt/c/Code/SWD-VisionSoftware-/src/device/kuka_eki_hw_interface/include -g -std=gnu++2a -Wall -Werror -o CMakeFiles/kuka_eki_hw_interface.dir/kuka_eki_hw_interface.cpp.o -c /mnt/c/Code/SWD-VisionSoftware-/src/device/kuka_eki_hw_interface/kuka_eki_hw_interface.cpp",
   "file": "/mnt/c/Code/SWD-VisionSoftware-/src/device/kuka_eki_hw_interface/kuka_eki_hw_interface.cpp",
   "output": "src/device/kuka_eki_hw_interface/CMakeFiles/kuka_eki_hw_interface.dir/kuka_eki_hw_interface.cpp.o"
+},
+{
+  "directory": "/mnt/c/Code/SWD-VisionSoftware-/build/src/process/image",
+  "command": "/usr/bin/c++  -I/usr/include/eigen3 -isystem /usr/local/include/opencv4 -g -std=gnu++2a -Wall -Werror -o CMakeFiles/imgproc.dir/imgproc.cpp.o -c /mnt/c/Code/SWD-VisionSoftware-/src/process/image/imgproc.cpp",
+  "file": "/mnt/c/Code/SWD-VisionSoftware-/src/process/image/imgproc.cpp",
+  "output": "src/process/image/CMakeFiles/imgproc.dir/imgproc.cpp.o"
 }
 ]

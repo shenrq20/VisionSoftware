@@ -24,3 +24,16 @@
 /mnt/c/Code/SWD-VisionSoftware-/build/src/device/kuka_eki_hw_interface/CMakeFiles/install.dir
 /mnt/c/Code/SWD-VisionSoftware-/build/src/device/kuka_eki_hw_interface/CMakeFiles/install/local.dir
 /mnt/c/Code/SWD-VisionSoftware-/build/src/device/kuka_eki_hw_interface/CMakeFiles/install/strip.dir
+/mnt/c/Code/SWD-VisionSoftware-/build/src/process/CMakeFiles/edit_cache.dir
+/mnt/c/Code/SWD-VisionSoftware-/build/src/process/CMakeFiles/rebuild_cache.dir
+/mnt/c/Code/SWD-VisionSoftware-/build/src/process/CMakeFiles/list_install_components.dir
+/mnt/c/Code/SWD-VisionSoftware-/build/src/process/CMakeFiles/install.dir
+/mnt/c/Code/SWD-VisionSoftware-/build/src/process/CMakeFiles/install/local.dir
+/mnt/c/Code/SWD-VisionSoftware-/build/src/process/CMakeFiles/install/strip.dir
+/mnt/c/Code/SWD-VisionSoftware-/build/src/process/image/CMakeFiles/imgproc.dir
+/mnt/c/Code/SWD-VisionSoftware-/build/src/process/image/CMakeFiles/edit_cache.dir
+/mnt/c/Code/SWD-VisionSoftware-/build/src/process/image/CMakeFiles/rebuild_cache.dir
+/mnt/c/Code/SWD-VisionSoftware-/build/src/process/image/CMakeFiles/list_install_components.dir
+/mnt/c/Code/SWD-VisionSoftware-/build/src/process/image/CMakeFiles/install.dir
+/mnt/c/Code/SWD-VisionSoftware-/build/src/process/image/CMakeFiles/install/local.dir
+/mnt/c/Code/SWD-VisionSoftware-/build/src/process/image/CMakeFiles/install/strip.dir

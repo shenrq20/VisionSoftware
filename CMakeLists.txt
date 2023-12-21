@@ -27,11 +27,12 @@ add_executable(VisionSoftware main.cpp)
 
 # 链接所需的库
 target_link_libraries(VisionSoftware ${VTK_LIBRARIES})
-target_link_libraries(VisionSoftware kuka_eki_hw_interface)
+target_link_libraries(VisionSoftware kuka_eki_hw_interface imgproc)
 target_include_directories(
     VisionSoftware 
     PUBLIC src/device/kuka_eki_hw_interface/include
     PUBLIC src/device/kuka_eki_hw_interface/include/kuka_eki_hw_interface
+    PUBLIC src/process/image/include
     )
 
 # 添加子目录
