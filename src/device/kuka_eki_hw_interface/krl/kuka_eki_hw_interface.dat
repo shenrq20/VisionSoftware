@@ -1,0 +1,5 @@
+&ACCESS RVO
+defdat kuka_eki_hw_interface public
+   ext bas(bas_command  :in,real  :in )
+   DECL GLOBAL BOOL movement_done = false
+enddat
