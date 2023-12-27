@@ -1,5 +1,14 @@
-#ifndef KUKA_EKI_HW_INTERFACE
-#define KUKA_EKI_HW_INTERFACE
+/**
+ * @file kuka_eki_hw_interface.h
+ * @author Shibo LIU (shibo.liu@saiwider.com)
+ * @brief 设备-Kuka机器人类头文件
+ * @version 0.1
+ * @date 2023-12-26
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ */
+#pragma once
 
 #include <utility>
 #include <vector>
@@ -12,7 +21,8 @@
 #include <chrono>
 #include <thread>
 
-namespace device {
+// Nkuka: namespace kuka
+namespace Nkuka {
     enum ControlType {
         kConfig,
         kMoving,
@@ -91,6 +101,25 @@ namespace device {
 
         int LogStatus(std::ofstream &fs);
 
+        /**
+         * @brief 控制机械臂移动
+         * 
+         * @param eki kuka机器人类
+         * @param targetPoint 目标位置
+         * @param controlType 控制类型，包含kConfig,kMoving
+         * @param movingType 运动类型，包含kLIN, kPTP, kLINRelTool, kPTPRelTool
+         * @param speed 机器人运动速度 m/s
+         * @param coordinateType 坐标类型，包含kCartesianCoordinateSystem, kAxisCoordinateSystem
+         * @param is_print_info 是否打印信息
+         * @return int 无错误范围0，有错误返回-1
+         */
+        int Move(EKI* eki, std::vector<double> targetPoint, 
+                Nkuka::ControlType controlType,
+                Nkuka::MovingType movingType,
+                double speed,
+                Nkuka::CoordinateType coordinateType,
+                bool is_print_info);
+
 
     private:
         const unsigned int n_dof_ = 6;
@@ -132,5 +161,3 @@ namespace device {
     };
 
 } // namespace eki
-
-#endif  // KUKA_EKI_HW_INTERFACE

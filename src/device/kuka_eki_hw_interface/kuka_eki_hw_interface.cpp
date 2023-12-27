@@ -1,12 +1,23 @@
+/**
+ * @file kuka_eki_hw_interface.cpp
+ * @author Shibo LIU (shibo.liu@saiwider.com)
+ * @brief 设备-Kuka机器人类cpp文件
+ * @version 0.1
+ * @date 2023-12-26
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ */
 #include <boost/array.hpp>
 #include <boost/bind.hpp>
 #include <boost/date_time/posix_time/posix_time_types.hpp>
+#include <iostream>
 #include <utility>
 
 #include <tinyxml.h>
 #include <kuka_eki_hw_interface/kuka_eki_hw_interface.h>
 
-namespace device {
+namespace Nkuka {
     EKI::EKI() : cartesian_position_(n_dof_, 0.0),
                  axis_position_(n_dof_, 0.0), joint_velocity_(n_dof_, 0.0),
                  joint_effort_(n_dof_, 0.0), deadline_(ios_),
@@ -170,6 +181,7 @@ namespace device {
         // Set eki server
         eki_server_address_ = ip_address;
         eki_server_port_ = port;
+        ready_ = 1;
 
 #ifdef EKI_DEBUG_OUTPUT
         std::cout << "Loaded Kuka EKI hardware interface" << std::endl;
@@ -371,6 +383,80 @@ namespace device {
             }
         }
         fs << std::endl;
+        return 0;
+    }
+
+    /**
+        * @brief 控制机械臂移动
+        * 
+        * @param eki kuka机器人类
+        * @param targetPoint 目标位置
+        * @param controlType 控制类型，包含kConfig,kMoving
+        * @param movingType 运动类型，包含kLIN, kPTP, kLINRelTool, kPTPRelTool
+        * @param speed 机器人运动速度 m/s
+        * @param coordinateType 坐标类型，包含kCartesianCoordinateSystem, kAxisCoordinateSystem
+        * @param is_print_info 是否打印信息
+        * @return int 无错误范围0，有错误返回-1
+        */
+    int EKI::Move(EKI* eki, std::vector<double> targetPoint, 
+                    Nkuka::ControlType controlType = Nkuka::kMoving,
+                    Nkuka::MovingType movingType = Nkuka::kPTP,
+                    double speed = 0.01,
+                    Nkuka::CoordinateType coordinateType = Nkuka::kCartesianCoordinateSystem,
+                    bool is_print_info = false){
+
+        while (!eki->IsReady()) {
+            std::this_thread::sleep_for(std::chrono::milliseconds(10));
+        }
+
+        // 设置配置信息
+        // 速度检查
+        if (speed > 2){ // 速度大于1m/s需确认
+            std::cout << "Warning: Velocity is larger than 2, please reset." << std::endl;
+            return -1;
+        } else if (speed > 1){ // 速度大于1m/s需确认
+            int speedConfirm;
+            std::cout << "Warning: Velocity is larger than 1, please check." << std::endl;
+            std::cin >> speedConfirm;
+            if (speedConfirm==0){
+                return -1;
+            }
+        }
+        Nkuka::ControlStruct configInfoStruct;
+        configInfoStruct.control_type_ = Nkuka::kConfig;
+        configInfoStruct.kv_double_.emplace_back("VelCP", speed);
+        eki->Write(configInfoStruct);
+        
+        // 设置运动控制指令
+        Nkuka::ControlStruct moveInfoStruct;
+        moveInfoStruct.control_type_ = controlType;
+        moveInfoStruct.moving_type_ = movingType;
+        moveInfoStruct.coordinate_type_ = coordinateType;
+
+        // 设置目标位置
+        moveInfoStruct.target_cartesian_position_ = targetPoint;
+
+        // 设置控制信息
+        eki->Write(moveInfoStruct);
+
+        // 打印目标位置
+        if (is_print_info){
+            std::cerr << "Set Target: {";
+            for (auto it = moveInfoStruct.target_cartesian_position_.begin();
+                    it != moveInfoStruct.target_cartesian_position_.end(); ++it) {
+                if (std::next(it) != moveInfoStruct.target_cartesian_position_.end()) {
+                    std::cerr << *it << ", ";
+                } else {
+                    std::cerr << *it << "}" << std::endl;
+                }
+            }
+        }
+
+        // 等待运动完成
+        while (!eki->IsReady()) {
+            std::this_thread::sleep_for(std::chrono::milliseconds(10));
+        }
+
         return 0;
     }
 
