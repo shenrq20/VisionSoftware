@@ -22,7 +22,7 @@
 #include <thread>
 
 // Nkuka: namespace kuka
-namespace Nkuka {
+namespace kuka {
     enum ControlType {
         kConfig,
         kMoving,
@@ -114,10 +114,10 @@ namespace Nkuka {
          * @return int 无错误范围0，有错误返回-1
          */
         int Move(EKI* eki, std::vector<double> targetPoint, 
-                Nkuka::ControlType controlType,
-                Nkuka::MovingType movingType,
+                kuka::ControlType controlType,
+                kuka::MovingType movingType,
                 double speed,
-                Nkuka::CoordinateType coordinateType,
+                kuka::CoordinateType coordinateType,
                 bool is_print_info);
 
 

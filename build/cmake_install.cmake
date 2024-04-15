@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/c/Code/SWD-VisionSoftware-
+# Install script for directory: /mnt/c/dev/saiwider_vision_imgui/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,7 +44,17 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/mnt/c/Code/SWD-VisionSoftware-/build/src/cmake_install.cmake")
+  include("/mnt/c/dev/saiwider_vision_imgui/build/deviceConnect/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/mnt/c/dev/saiwider_vision_imgui/build/UIcomponent/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/mnt/c/dev/saiwider_vision_imgui/build/device/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -55,5 +65,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/mnt/c/Code/SWD-VisionSoftware-/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/mnt/c/dev/saiwider_vision_imgui/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

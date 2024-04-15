@@ -1,1 +1,4 @@
+add_subdirectory(genicam)
+add_subdirectory(image_processing)
 add_subdirectory(kuka_eki_hw_interface)
+

@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.24)
 
 # 项目名称
-project(kuka_eki_hw_interface)
+project(kuka_eki)
 
 # 设置 C++ 标准
 set(CMAKE_CXX_STANDARD 20)
@@ -27,19 +27,19 @@ include_directories(
 
 # 创建静态库 kuka_eki_hw_interface
 add_library(
-    kuka_eki_hw_interface STATIC
+    kuka_eki STATIC
     kuka_eki_hw_interface.cpp
 )
 
 # 链接静态库和依赖库
 target_link_libraries(
-    kuka_eki_hw_interface
+    kuka_eki
     PUBLIC PkgConfig::DEPS
     -pthread
 )
 
 # 安装目标库到指定的目录
-install(TARGETS kuka_eki_hw_interface DESTINATION lib)
+install(TARGETS kuka_eki DESTINATION lib)
 
 # 安装头文件目录到指定的目录
 install(DIRECTORY include/kuka_eki_hw_interface DESTINATION include)

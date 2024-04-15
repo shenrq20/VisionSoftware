@@ -8,16 +8,18 @@
  * @copyright Copyright (c) 2023
  * 
  */
+#define EKI_DEBUG_OUTPUT 1
+
 #include <boost/array.hpp>
 #include <boost/bind.hpp>
 #include <boost/date_time/posix_time/posix_time_types.hpp>
-#include <iostream>
-#include <utility>
+// #include <iostream>
+// #include <utility>
 
 #include <tinyxml.h>
 #include <kuka_eki_hw_interface/kuka_eki_hw_interface.h>
 
-namespace Nkuka {
+namespace kuka {
     EKI::EKI() : cartesian_position_(n_dof_, 0.0),
                  axis_position_(n_dof_, 0.0), joint_velocity_(n_dof_, 0.0),
                  joint_effort_(n_dof_, 0.0), deadline_(ios_),
@@ -399,10 +401,10 @@ namespace Nkuka {
         * @return int 无错误范围0，有错误返回-1
         */
     int EKI::Move(EKI* eki, std::vector<double> targetPoint, 
-                    Nkuka::ControlType controlType = Nkuka::kMoving,
-                    Nkuka::MovingType movingType = Nkuka::kPTP,
+                    kuka::ControlType controlType = kuka::kMoving,
+                    kuka::MovingType movingType = kuka::kPTP,
                     double speed = 0.01,
-                    Nkuka::CoordinateType coordinateType = Nkuka::kCartesianCoordinateSystem,
+                    kuka::CoordinateType coordinateType = kuka::kCartesianCoordinateSystem,
                     bool is_print_info = false){
 
         while (!eki->IsReady()) {
@@ -422,13 +424,13 @@ namespace Nkuka {
                 return -1;
             }
         }
-        Nkuka::ControlStruct configInfoStruct;
-        configInfoStruct.control_type_ = Nkuka::kConfig;
+        kuka::ControlStruct configInfoStruct;
+        configInfoStruct.control_type_ = kuka::kConfig;
         configInfoStruct.kv_double_.emplace_back("VelCP", speed);
         eki->Write(configInfoStruct);
         
         // 设置运动控制指令
-        Nkuka::ControlStruct moveInfoStruct;
+        kuka::ControlStruct moveInfoStruct;
         moveInfoStruct.control_type_ = controlType;
         moveInfoStruct.moving_type_ = movingType;
         moveInfoStruct.coordinate_type_ = coordinateType;

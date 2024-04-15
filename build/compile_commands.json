@@ -1,20 +1,176 @@
 [
 {
-  "directory": "/mnt/c/Code/SWD-VisionSoftware-/build",
-  "command": "/usr/bin/g++ -DDIY_NO_THREADS -DFMT_SHARED -DH5_BUILT_AS_DYNAMIC_LIB -DVTK_HAS_OGGTHEORA_SUPPORT -Dkiss_fft_scalar=double -I/usr/include/eigen3 -I/mnt/c/Code/SWD-VisionSoftware-/src/device/kuka_eki_hw_interface/include -I/mnt/c/Code/SWD-VisionSoftware-/src/device/kuka_eki_hw_interface/include/kuka_eki_hw_interface -I/mnt/c/Code/SWD-VisionSoftware-/src/process/image/include -isystem /usr/local/include/opencv4 -isystem /usr/local/vtk-9.3/include/vtk-9.3 -isystem /usr/local/vtk-9.3/include/vtk-9.3/vtkfreetype/include -isystem /usr/local/vtk-9.3/include/vtk-9.3/vtkhdf5 -isystem /usr/local/vtk-9.3/include/vtk-9.3/vtkhdf5/src -isystem /usr/local/vtk-9.3/include/vtk-9.3/vtkhdf5/hl/src -isystem /usr/local/vtk-9.3/include/vtk-9.3/vtkogg/include -isystem /usr/local/vtk-9.3/include/vtk-9.3/vtklibproj/src -isystem /usr/local/vtk-9.3/include/vtk-9.3/vtknlohmannjson/include -isystem /usr/local/vtk-9.3/include/vtk-9.3/vtklibxml2/include -g -std=gnu++2a -o CMakeFiles/VisionSoftware.dir/main.cpp.o -c /mnt/c/Code/SWD-VisionSoftware-/main.cpp",
-  "file": "/mnt/c/Code/SWD-VisionSoftware-/main.cpp",
-  "output": "CMakeFiles/VisionSoftware.dir/main.cpp.o"
+  "directory": "/mnt/c/dev/saiwider_vision_imgui/build",
+  "command": "/usr/bin/clang++ -DImTextureID=ImU64 -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/glfw/include -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/imgui -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/imgui/backends -I/mnt/c/dev/saiwider_vision_imgui/src/.. -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/imgui/include -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/glfw/deps -I/mnt/c/dev/saiwider_vision_imgui/src/deviceConnect/include -I/mnt/c/dev/saiwider_vision_imgui/src/UIcomponent/include -I/mnt/c/dev/saiwider_vision_imgui/src/device/kuka_eki_hw_interface/include/kuka_eki_hw_interface -I/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/include  -DVK_PROTOTYPES -g -std=gnu++11 -o CMakeFiles/SaiwiderVision.dir/main.cpp.o -c /mnt/c/dev/saiwider_vision_imgui/src/main.cpp",
+  "file": "/mnt/c/dev/saiwider_vision_imgui/src/main.cpp",
+  "output": "CMakeFiles/SaiwiderVision.dir/main.cpp.o"
 },
 {
-  "directory": "/mnt/c/Code/SWD-VisionSoftware-/build",
-  "command": "/usr/bin/g++ -I/usr/include/eigen3 -I/usr/local/include/opencv4 -I/mnt/c/Code/SWD-VisionSoftware-/src/device/kuka_eki_hw_interface/include -g -std=gnu++2a -Wall -Werror -o src/device/kuka_eki_hw_interface/CMakeFiles/kuka_eki_hw_interface.dir/kuka_eki_hw_interface.cpp.o -c /mnt/c/Code/SWD-VisionSoftware-/src/device/kuka_eki_hw_interface/kuka_eki_hw_interface.cpp",
-  "file": "/mnt/c/Code/SWD-VisionSoftware-/src/device/kuka_eki_hw_interface/kuka_eki_hw_interface.cpp",
-  "output": "src/device/kuka_eki_hw_interface/CMakeFiles/kuka_eki_hw_interface.dir/kuka_eki_hw_interface.cpp.o"
+  "directory": "/mnt/c/dev/saiwider_vision_imgui/build",
+  "command": "/usr/bin/clang++ -DImTextureID=ImU64 -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/glfw/include -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/imgui -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/imgui/backends -I/mnt/c/dev/saiwider_vision_imgui/src/.. -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/imgui/include -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/glfw/deps -I/mnt/c/dev/saiwider_vision_imgui/src/deviceConnect/include -I/mnt/c/dev/saiwider_vision_imgui/src/UIcomponent/include -I/mnt/c/dev/saiwider_vision_imgui/src/device/kuka_eki_hw_interface/include/kuka_eki_hw_interface -I/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/include  -DVK_PROTOTYPES -g -std=gnu++11 -o CMakeFiles/SaiwiderVision.dir/mnt/c/dev/saiwider_vision_imgui/3rdparty/imgui/backends/imgui_impl_glfw.cpp.o -c /mnt/c/dev/saiwider_vision_imgui/3rdparty/imgui/backends/imgui_impl_glfw.cpp",
+  "file": "/mnt/c/dev/saiwider_vision_imgui/3rdparty/imgui/backends/imgui_impl_glfw.cpp",
+  "output": "CMakeFiles/SaiwiderVision.dir/mnt/c/dev/saiwider_vision_imgui/3rdparty/imgui/backends/imgui_impl_glfw.cpp.o"
 },
 {
-  "directory": "/mnt/c/Code/SWD-VisionSoftware-/build",
-  "command": "/usr/bin/g++ -I/usr/include/eigen3 -isystem /usr/local/include/opencv4 -g -std=gnu++2a -Wall -Werror -o src/process/image/CMakeFiles/imgproc.dir/imgproc.cpp.o -c /mnt/c/Code/SWD-VisionSoftware-/src/process/image/imgproc.cpp",
-  "file": "/mnt/c/Code/SWD-VisionSoftware-/src/process/image/imgproc.cpp",
-  "output": "src/process/image/CMakeFiles/imgproc.dir/imgproc.cpp.o"
+  "directory": "/mnt/c/dev/saiwider_vision_imgui/build",
+  "command": "/usr/bin/clang++ -DImTextureID=ImU64 -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/glfw/include -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/imgui -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/imgui/backends -I/mnt/c/dev/saiwider_vision_imgui/src/.. -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/imgui/include -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/glfw/deps -I/mnt/c/dev/saiwider_vision_imgui/src/deviceConnect/include -I/mnt/c/dev/saiwider_vision_imgui/src/UIcomponent/include -I/mnt/c/dev/saiwider_vision_imgui/src/device/kuka_eki_hw_interface/include/kuka_eki_hw_interface -I/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/include  -DVK_PROTOTYPES -g -std=gnu++11 -o CMakeFiles/SaiwiderVision.dir/mnt/c/dev/saiwider_vision_imgui/3rdparty/imgui/backends/imgui_impl_vulkan.cpp.o -c /mnt/c/dev/saiwider_vision_imgui/3rdparty/imgui/backends/imgui_impl_vulkan.cpp",
+  "file": "/mnt/c/dev/saiwider_vision_imgui/3rdparty/imgui/backends/imgui_impl_vulkan.cpp",
+  "output": "CMakeFiles/SaiwiderVision.dir/mnt/c/dev/saiwider_vision_imgui/3rdparty/imgui/backends/imgui_impl_vulkan.cpp.o"
+},
+{
+  "directory": "/mnt/c/dev/saiwider_vision_imgui/build",
+  "command": "/usr/bin/clang++ -DImTextureID=ImU64 -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/glfw/include -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/imgui -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/imgui/backends -I/mnt/c/dev/saiwider_vision_imgui/src/.. -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/imgui/include -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/glfw/deps -I/mnt/c/dev/saiwider_vision_imgui/src/deviceConnect/include -I/mnt/c/dev/saiwider_vision_imgui/src/UIcomponent/include -I/mnt/c/dev/saiwider_vision_imgui/src/device/kuka_eki_hw_interface/include/kuka_eki_hw_interface -I/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/include  -DVK_PROTOTYPES -g -std=gnu++11 -o CMakeFiles/SaiwiderVision.dir/mnt/c/dev/saiwider_vision_imgui/3rdparty/imgui/imgui.cpp.o -c /mnt/c/dev/saiwider_vision_imgui/3rdparty/imgui/imgui.cpp",
+  "file": "/mnt/c/dev/saiwider_vision_imgui/3rdparty/imgui/imgui.cpp",
+  "output": "CMakeFiles/SaiwiderVision.dir/mnt/c/dev/saiwider_vision_imgui/3rdparty/imgui/imgui.cpp.o"
+},
+{
+  "directory": "/mnt/c/dev/saiwider_vision_imgui/build",
+  "command": "/usr/bin/clang++ -DImTextureID=ImU64 -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/glfw/include -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/imgui -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/imgui/backends -I/mnt/c/dev/saiwider_vision_imgui/src/.. -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/imgui/include -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/glfw/deps -I/mnt/c/dev/saiwider_vision_imgui/src/deviceConnect/include -I/mnt/c/dev/saiwider_vision_imgui/src/UIcomponent/include -I/mnt/c/dev/saiwider_vision_imgui/src/device/kuka_eki_hw_interface/include/kuka_eki_hw_interface -I/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/include  -DVK_PROTOTYPES -g -std=gnu++11 -o CMakeFiles/SaiwiderVision.dir/mnt/c/dev/saiwider_vision_imgui/3rdparty/imgui/imgui_draw.cpp.o -c /mnt/c/dev/saiwider_vision_imgui/3rdparty/imgui/imgui_draw.cpp",
+  "file": "/mnt/c/dev/saiwider_vision_imgui/3rdparty/imgui/imgui_draw.cpp",
+  "output": "CMakeFiles/SaiwiderVision.dir/mnt/c/dev/saiwider_vision_imgui/3rdparty/imgui/imgui_draw.cpp.o"
+},
+{
+  "directory": "/mnt/c/dev/saiwider_vision_imgui/build",
+  "command": "/usr/bin/clang++ -DImTextureID=ImU64 -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/glfw/include -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/imgui -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/imgui/backends -I/mnt/c/dev/saiwider_vision_imgui/src/.. -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/imgui/include -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/glfw/deps -I/mnt/c/dev/saiwider_vision_imgui/src/deviceConnect/include -I/mnt/c/dev/saiwider_vision_imgui/src/UIcomponent/include -I/mnt/c/dev/saiwider_vision_imgui/src/device/kuka_eki_hw_interface/include/kuka_eki_hw_interface -I/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/include  -DVK_PROTOTYPES -g -std=gnu++11 -o CMakeFiles/SaiwiderVision.dir/mnt/c/dev/saiwider_vision_imgui/3rdparty/imgui/imgui_demo.cpp.o -c /mnt/c/dev/saiwider_vision_imgui/3rdparty/imgui/imgui_demo.cpp",
+  "file": "/mnt/c/dev/saiwider_vision_imgui/3rdparty/imgui/imgui_demo.cpp",
+  "output": "CMakeFiles/SaiwiderVision.dir/mnt/c/dev/saiwider_vision_imgui/3rdparty/imgui/imgui_demo.cpp.o"
+},
+{
+  "directory": "/mnt/c/dev/saiwider_vision_imgui/build",
+  "command": "/usr/bin/clang++ -DImTextureID=ImU64 -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/glfw/include -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/imgui -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/imgui/backends -I/mnt/c/dev/saiwider_vision_imgui/src/.. -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/imgui/include -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/glfw/deps -I/mnt/c/dev/saiwider_vision_imgui/src/deviceConnect/include -I/mnt/c/dev/saiwider_vision_imgui/src/UIcomponent/include -I/mnt/c/dev/saiwider_vision_imgui/src/device/kuka_eki_hw_interface/include/kuka_eki_hw_interface -I/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/include  -DVK_PROTOTYPES -g -std=gnu++11 -o CMakeFiles/SaiwiderVision.dir/mnt/c/dev/saiwider_vision_imgui/3rdparty/imgui/imgui_tables.cpp.o -c /mnt/c/dev/saiwider_vision_imgui/3rdparty/imgui/imgui_tables.cpp",
+  "file": "/mnt/c/dev/saiwider_vision_imgui/3rdparty/imgui/imgui_tables.cpp",
+  "output": "CMakeFiles/SaiwiderVision.dir/mnt/c/dev/saiwider_vision_imgui/3rdparty/imgui/imgui_tables.cpp.o"
+},
+{
+  "directory": "/mnt/c/dev/saiwider_vision_imgui/build",
+  "command": "/usr/bin/clang++ -DImTextureID=ImU64 -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/glfw/include -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/imgui -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/imgui/backends -I/mnt/c/dev/saiwider_vision_imgui/src/.. -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/imgui/include -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/glfw/deps -I/mnt/c/dev/saiwider_vision_imgui/src/deviceConnect/include -I/mnt/c/dev/saiwider_vision_imgui/src/UIcomponent/include -I/mnt/c/dev/saiwider_vision_imgui/src/device/kuka_eki_hw_interface/include/kuka_eki_hw_interface -I/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/include  -DVK_PROTOTYPES -g -std=gnu++11 -o CMakeFiles/SaiwiderVision.dir/mnt/c/dev/saiwider_vision_imgui/3rdparty/imgui/imgui_widgets.cpp.o -c /mnt/c/dev/saiwider_vision_imgui/3rdparty/imgui/imgui_widgets.cpp",
+  "file": "/mnt/c/dev/saiwider_vision_imgui/3rdparty/imgui/imgui_widgets.cpp",
+  "output": "CMakeFiles/SaiwiderVision.dir/mnt/c/dev/saiwider_vision_imgui/3rdparty/imgui/imgui_widgets.cpp.o"
+},
+{
+  "directory": "/mnt/c/dev/saiwider_vision_imgui/build",
+  "command": "/usr/bin/clang -D_GLFW_USE_CONFIG_H -I/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/include -I/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/src -I/mnt/c/dev/saiwider_vision_imgui/build/binary_dir/src  -DVK_PROTOTYPES -g -std=gnu99 -fPIC -Wall -o binary_dir/src/CMakeFiles/glfw.dir/context.c.o -c /mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/src/context.c",
+  "file": "/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/src/context.c",
+  "output": "binary_dir/src/CMakeFiles/glfw.dir/context.c.o"
+},
+{
+  "directory": "/mnt/c/dev/saiwider_vision_imgui/build",
+  "command": "/usr/bin/clang -D_GLFW_USE_CONFIG_H -I/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/include -I/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/src -I/mnt/c/dev/saiwider_vision_imgui/build/binary_dir/src  -DVK_PROTOTYPES -g -std=gnu99 -fPIC -Wall -o binary_dir/src/CMakeFiles/glfw.dir/init.c.o -c /mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/src/init.c",
+  "file": "/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/src/init.c",
+  "output": "binary_dir/src/CMakeFiles/glfw.dir/init.c.o"
+},
+{
+  "directory": "/mnt/c/dev/saiwider_vision_imgui/build",
+  "command": "/usr/bin/clang -D_GLFW_USE_CONFIG_H -I/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/include -I/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/src -I/mnt/c/dev/saiwider_vision_imgui/build/binary_dir/src  -DVK_PROTOTYPES -g -std=gnu99 -fPIC -Wall -o binary_dir/src/CMakeFiles/glfw.dir/input.c.o -c /mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/src/input.c",
+  "file": "/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/src/input.c",
+  "output": "binary_dir/src/CMakeFiles/glfw.dir/input.c.o"
+},
+{
+  "directory": "/mnt/c/dev/saiwider_vision_imgui/build",
+  "command": "/usr/bin/clang -D_GLFW_USE_CONFIG_H -I/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/include -I/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/src -I/mnt/c/dev/saiwider_vision_imgui/build/binary_dir/src  -DVK_PROTOTYPES -g -std=gnu99 -fPIC -Wall -o binary_dir/src/CMakeFiles/glfw.dir/monitor.c.o -c /mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/src/monitor.c",
+  "file": "/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/src/monitor.c",
+  "output": "binary_dir/src/CMakeFiles/glfw.dir/monitor.c.o"
+},
+{
+  "directory": "/mnt/c/dev/saiwider_vision_imgui/build",
+  "command": "/usr/bin/clang -D_GLFW_USE_CONFIG_H -I/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/include -I/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/src -I/mnt/c/dev/saiwider_vision_imgui/build/binary_dir/src  -DVK_PROTOTYPES -g -std=gnu99 -fPIC -Wall -o binary_dir/src/CMakeFiles/glfw.dir/vulkan.c.o -c /mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/src/vulkan.c",
+  "file": "/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/src/vulkan.c",
+  "output": "binary_dir/src/CMakeFiles/glfw.dir/vulkan.c.o"
+},
+{
+  "directory": "/mnt/c/dev/saiwider_vision_imgui/build",
+  "command": "/usr/bin/clang -D_GLFW_USE_CONFIG_H -I/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/include -I/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/src -I/mnt/c/dev/saiwider_vision_imgui/build/binary_dir/src  -DVK_PROTOTYPES -g -std=gnu99 -fPIC -Wall -o binary_dir/src/CMakeFiles/glfw.dir/window.c.o -c /mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/src/window.c",
+  "file": "/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/src/window.c",
+  "output": "binary_dir/src/CMakeFiles/glfw.dir/window.c.o"
+},
+{
+  "directory": "/mnt/c/dev/saiwider_vision_imgui/build",
+  "command": "/usr/bin/clang -D_GLFW_USE_CONFIG_H -I/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/include -I/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/src -I/mnt/c/dev/saiwider_vision_imgui/build/binary_dir/src  -DVK_PROTOTYPES -g -std=gnu99 -fPIC -Wall -o binary_dir/src/CMakeFiles/glfw.dir/x11_init.c.o -c /mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/src/x11_init.c",
+  "file": "/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/src/x11_init.c",
+  "output": "binary_dir/src/CMakeFiles/glfw.dir/x11_init.c.o"
+},
+{
+  "directory": "/mnt/c/dev/saiwider_vision_imgui/build",
+  "command": "/usr/bin/clang -D_GLFW_USE_CONFIG_H -I/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/include -I/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/src -I/mnt/c/dev/saiwider_vision_imgui/build/binary_dir/src  -DVK_PROTOTYPES -g -std=gnu99 -fPIC -Wall -o binary_dir/src/CMakeFiles/glfw.dir/x11_monitor.c.o -c /mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/src/x11_monitor.c",
+  "file": "/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/src/x11_monitor.c",
+  "output": "binary_dir/src/CMakeFiles/glfw.dir/x11_monitor.c.o"
+},
+{
+  "directory": "/mnt/c/dev/saiwider_vision_imgui/build",
+  "command": "/usr/bin/clang -D_GLFW_USE_CONFIG_H -I/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/include -I/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/src -I/mnt/c/dev/saiwider_vision_imgui/build/binary_dir/src  -DVK_PROTOTYPES -g -std=gnu99 -fPIC -Wall -o binary_dir/src/CMakeFiles/glfw.dir/x11_window.c.o -c /mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/src/x11_window.c",
+  "file": "/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/src/x11_window.c",
+  "output": "binary_dir/src/CMakeFiles/glfw.dir/x11_window.c.o"
+},
+{
+  "directory": "/mnt/c/dev/saiwider_vision_imgui/build",
+  "command": "/usr/bin/clang -D_GLFW_USE_CONFIG_H -I/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/include -I/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/src -I/mnt/c/dev/saiwider_vision_imgui/build/binary_dir/src  -DVK_PROTOTYPES -g -std=gnu99 -fPIC -Wall -o binary_dir/src/CMakeFiles/glfw.dir/xkb_unicode.c.o -c /mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/src/xkb_unicode.c",
+  "file": "/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/src/xkb_unicode.c",
+  "output": "binary_dir/src/CMakeFiles/glfw.dir/xkb_unicode.c.o"
+},
+{
+  "directory": "/mnt/c/dev/saiwider_vision_imgui/build",
+  "command": "/usr/bin/clang -D_GLFW_USE_CONFIG_H -I/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/include -I/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/src -I/mnt/c/dev/saiwider_vision_imgui/build/binary_dir/src  -DVK_PROTOTYPES -g -std=gnu99 -fPIC -Wall -o binary_dir/src/CMakeFiles/glfw.dir/posix_time.c.o -c /mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/src/posix_time.c",
+  "file": "/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/src/posix_time.c",
+  "output": "binary_dir/src/CMakeFiles/glfw.dir/posix_time.c.o"
+},
+{
+  "directory": "/mnt/c/dev/saiwider_vision_imgui/build",
+  "command": "/usr/bin/clang -D_GLFW_USE_CONFIG_H -I/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/include -I/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/src -I/mnt/c/dev/saiwider_vision_imgui/build/binary_dir/src  -DVK_PROTOTYPES -g -std=gnu99 -fPIC -Wall -o binary_dir/src/CMakeFiles/glfw.dir/posix_thread.c.o -c /mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/src/posix_thread.c",
+  "file": "/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/src/posix_thread.c",
+  "output": "binary_dir/src/CMakeFiles/glfw.dir/posix_thread.c.o"
+},
+{
+  "directory": "/mnt/c/dev/saiwider_vision_imgui/build",
+  "command": "/usr/bin/clang -D_GLFW_USE_CONFIG_H -I/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/include -I/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/src -I/mnt/c/dev/saiwider_vision_imgui/build/binary_dir/src  -DVK_PROTOTYPES -g -std=gnu99 -fPIC -Wall -o binary_dir/src/CMakeFiles/glfw.dir/glx_context.c.o -c /mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/src/glx_context.c",
+  "file": "/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/src/glx_context.c",
+  "output": "binary_dir/src/CMakeFiles/glfw.dir/glx_context.c.o"
+},
+{
+  "directory": "/mnt/c/dev/saiwider_vision_imgui/build",
+  "command": "/usr/bin/clang -D_GLFW_USE_CONFIG_H -I/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/include -I/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/src -I/mnt/c/dev/saiwider_vision_imgui/build/binary_dir/src  -DVK_PROTOTYPES -g -std=gnu99 -fPIC -Wall -o binary_dir/src/CMakeFiles/glfw.dir/egl_context.c.o -c /mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/src/egl_context.c",
+  "file": "/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/src/egl_context.c",
+  "output": "binary_dir/src/CMakeFiles/glfw.dir/egl_context.c.o"
+},
+{
+  "directory": "/mnt/c/dev/saiwider_vision_imgui/build",
+  "command": "/usr/bin/clang -D_GLFW_USE_CONFIG_H -I/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/include -I/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/src -I/mnt/c/dev/saiwider_vision_imgui/build/binary_dir/src  -DVK_PROTOTYPES -g -std=gnu99 -fPIC -Wall -o binary_dir/src/CMakeFiles/glfw.dir/osmesa_context.c.o -c /mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/src/osmesa_context.c",
+  "file": "/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/src/osmesa_context.c",
+  "output": "binary_dir/src/CMakeFiles/glfw.dir/osmesa_context.c.o"
+},
+{
+  "directory": "/mnt/c/dev/saiwider_vision_imgui/build",
+  "command": "/usr/bin/clang -D_GLFW_USE_CONFIG_H -I/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/include -I/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/src -I/mnt/c/dev/saiwider_vision_imgui/build/binary_dir/src  -DVK_PROTOTYPES -g -std=gnu99 -fPIC -Wall -o binary_dir/src/CMakeFiles/glfw.dir/linux_joystick.c.o -c /mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/src/linux_joystick.c",
+  "file": "/mnt/c/dev/saiwider_vision_imgui/3rdparty/glfw/src/linux_joystick.c",
+  "output": "binary_dir/src/CMakeFiles/glfw.dir/linux_joystick.c.o"
+},
+{
+  "directory": "/mnt/c/dev/saiwider_vision_imgui/build",
+  "command": "/usr/bin/clang++ -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/glfw/include -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/imgui -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/imgui/backends -I/mnt/c/dev/saiwider_vision_imgui/src/.. -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/imgui/include -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/glfw/deps -I/mnt/c/dev/saiwider_vision_imgui/src/deviceConnect/include -I/mnt/c/dev/saiwider_vision_imgui/src/UIcomponent/include -I/mnt/c/dev/saiwider_vision_imgui/src/device/kuka_eki_hw_interface/include/kuka_eki_hw_interface -I/mnt/c/dev/saiwider_vision_imgui/src/deviceConnect/../../3rdparty/imgui -I/mnt/c/dev/saiwider_vision_imgui/src/deviceConnect/../../3rdparty/imgui/backends  -DVK_PROTOTYPES -g -std=gnu++2a -o deviceConnect/CMakeFiles/deviceConnect.dir/devCamConnect.cpp.o -c /mnt/c/dev/saiwider_vision_imgui/src/deviceConnect/devCamConnect.cpp",
+  "file": "/mnt/c/dev/saiwider_vision_imgui/src/deviceConnect/devCamConnect.cpp",
+  "output": "deviceConnect/CMakeFiles/deviceConnect.dir/devCamConnect.cpp.o"
+},
+{
+  "directory": "/mnt/c/dev/saiwider_vision_imgui/build",
+  "command": "/usr/bin/clang++ -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/glfw/include -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/imgui -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/imgui/backends -I/mnt/c/dev/saiwider_vision_imgui/src/.. -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/imgui/include -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/glfw/deps -I/mnt/c/dev/saiwider_vision_imgui/src/deviceConnect/include -I/mnt/c/dev/saiwider_vision_imgui/src/UIcomponent/include -I/mnt/c/dev/saiwider_vision_imgui/src/device/kuka_eki_hw_interface/include/kuka_eki_hw_interface -I/mnt/c/dev/saiwider_vision_imgui/src/deviceConnect/../../3rdparty/imgui -I/mnt/c/dev/saiwider_vision_imgui/src/deviceConnect/../../3rdparty/imgui/backends  -DVK_PROTOTYPES -g -std=gnu++2a -o deviceConnect/CMakeFiles/deviceConnect.dir/devRobConnect.cpp.o -c /mnt/c/dev/saiwider_vision_imgui/src/deviceConnect/devRobConnect.cpp",
+  "file": "/mnt/c/dev/saiwider_vision_imgui/src/deviceConnect/devRobConnect.cpp",
+  "output": "deviceConnect/CMakeFiles/deviceConnect.dir/devRobConnect.cpp.o"
+},
+{
+  "directory": "/mnt/c/dev/saiwider_vision_imgui/build",
+  "command": "/usr/bin/clang++ -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/glfw/include -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/imgui -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/imgui/backends -I/mnt/c/dev/saiwider_vision_imgui/src/.. -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/imgui/include -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/glfw/deps -I/mnt/c/dev/saiwider_vision_imgui/src/deviceConnect/include -I/mnt/c/dev/saiwider_vision_imgui/src/UIcomponent/include -I/mnt/c/dev/saiwider_vision_imgui/src/device/kuka_eki_hw_interface/include/kuka_eki_hw_interface -I/mnt/c/dev/saiwider_vision_imgui/src/UIcomponent/../../3rdparty/imgui -I/mnt/c/dev/saiwider_vision_imgui/src/UIcomponent/../../3rdparty/imgui/backends  -DVK_PROTOTYPES -g -std=gnu++2a -o UIcomponent/CMakeFiles/UIcomponent.dir/log.cpp.o -c /mnt/c/dev/saiwider_vision_imgui/src/UIcomponent/log.cpp",
+  "file": "/mnt/c/dev/saiwider_vision_imgui/src/UIcomponent/log.cpp",
+  "output": "UIcomponent/CMakeFiles/UIcomponent.dir/log.cpp.o"
+},
+{
+  "directory": "/mnt/c/dev/saiwider_vision_imgui/build",
+  "command": "/usr/bin/clang++ -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/glfw/include -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/imgui -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/imgui/backends -I/mnt/c/dev/saiwider_vision_imgui/src/.. -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/imgui/include -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/glfw/deps -I/mnt/c/dev/saiwider_vision_imgui/src/deviceConnect/include -I/mnt/c/dev/saiwider_vision_imgui/src/UIcomponent/include -I/mnt/c/dev/saiwider_vision_imgui/src/device/kuka_eki_hw_interface/include/kuka_eki_hw_interface -I/mnt/c/dev/saiwider_vision_imgui/src/UIcomponent/../../3rdparty/imgui -I/mnt/c/dev/saiwider_vision_imgui/src/UIcomponent/../../3rdparty/imgui/backends  -DVK_PROTOTYPES -g -std=gnu++2a -o UIcomponent/CMakeFiles/UIcomponent.dir/mnt/c/dev/saiwider_vision_imgui/3rdparty/imgui/imgui.cpp.o -c /mnt/c/dev/saiwider_vision_imgui/3rdparty/imgui/imgui.cpp",
+  "file": "/mnt/c/dev/saiwider_vision_imgui/3rdparty/imgui/imgui.cpp",
+  "output": "UIcomponent/CMakeFiles/UIcomponent.dir/mnt/c/dev/saiwider_vision_imgui/3rdparty/imgui/imgui.cpp.o"
+},
+{
+  "directory": "/mnt/c/dev/saiwider_vision_imgui/build",
+  "command": "/usr/bin/clang++ -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/glfw/include -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/imgui -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/imgui/backends -I/mnt/c/dev/saiwider_vision_imgui/src/.. -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/imgui/include -I/mnt/c/dev/saiwider_vision_imgui/src/../3rdparty/glfw/deps -I/mnt/c/dev/saiwider_vision_imgui/src/deviceConnect/include -I/mnt/c/dev/saiwider_vision_imgui/src/UIcomponent/include -I/mnt/c/dev/saiwider_vision_imgui/src/device/kuka_eki_hw_interface/include/kuka_eki_hw_interface -I/mnt/c/dev/saiwider_vision_imgui/src/device/kuka_eki_hw_interface/include  -DVK_PROTOTYPES -g -std=gnu++2a -Wall -Werror -o device/kuka_eki_hw_interface/CMakeFiles/kuka_eki.dir/kuka_eki_hw_interface.cpp.o -c /mnt/c/dev/saiwider_vision_imgui/src/device/kuka_eki_hw_interface/kuka_eki_hw_interface.cpp",
+  "file": "/mnt/c/dev/saiwider_vision_imgui/src/device/kuka_eki_hw_interface/kuka_eki_hw_interface.cpp",
+  "output": "device/kuka_eki_hw_interface/CMakeFiles/kuka_eki.dir/kuka_eki_hw_interface.cpp.o"
 }
 ]
